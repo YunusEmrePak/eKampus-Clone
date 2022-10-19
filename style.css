@@ -69,7 +69,7 @@ body {
 }
 
 .home {
-    background-color: #EB4747;
+    background-color: #EB1D36;
     margin-left: 20px;
     height: 45px;
     text-align: center;
@@ -79,7 +79,7 @@ body {
 }
 
 .home:hover {
-    background-color: #EB1D36;
+    background-color: #FF8787;
     box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     cursor: pointer;
 }
@@ -98,7 +98,7 @@ body {
 .navbar {
     height: 50px;
     width: 1600px;
-    background-color: #B6E388;
+    background-color: #BCE29E;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -106,18 +106,19 @@ body {
 
 .courses {
     height: 50px;
-    background-color: #372948;
+    background-color: #EB1D36;
     margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #E5EBB2;
     padding-left: 5px;
     padding-right: 5px;
+    border-radius: 10px;
 }
 
 .courses:hover {
-    background-color: #5C2E7E;
+    background-color: #FF8787;
     cursor: pointer;
 }
 

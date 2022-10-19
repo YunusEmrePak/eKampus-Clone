@@ -39,3 +39,12 @@ rightClick = () => {
 
 leftArrow.addEventListener("click", leftClick);
 rightArrow.addEventListener("click", rightClick);
+
+for (var j = 0;j < 999; j++) {
+    setInterval (function(){
+        main.style.backgroundImage = `url('${arrayFoto[1]}')`;
+      } , 4000);
+      setInterval (function(){
+        main.style.backgroundImage = `url('${arrayFoto[0]}')`;
+      } , 8000);
+}

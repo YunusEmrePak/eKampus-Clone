@@ -42,11 +42,17 @@ rightClick = () => {
 leftArrow.addEventListener("click", leftClick);
 rightArrow.addEventListener("click", rightClick);
 
-// for (var j = 0;j < 999; j++) {
-//     setInterval (function(){
-//         main.style.backgroundImage = `url('${arrayFoto[1]}')`;
-//       } , 4000);
-//       setInterval (function(){
-//         main.style.backgroundImage = `url('${arrayFoto[0]}')`;
-//       } , 8000);
-// }
+for (var j = 0;j < 999; j++) {
+    setInterval (function(){
+        mainImg.src = "img/mainfoto2.png";
+        i = 0;
+        titleMain.innerHTML = "Unlimited Access to Information"
+        contentMain.innerHTML = "Electronic Databases, Books, Journals, Open Access Resources, Open Course Materials";
+      } , 3000);
+      setInterval (function(){
+        mainImg.src = "img/mainfoto.png";
+        i = 1;
+        titleMain.innerHTML = "The Faculty of Open and Distance Education";
+        contentMain.innerHTML = "Innovation, quality, flexibilty, interaction, experience";
+      } , 6000);
+}

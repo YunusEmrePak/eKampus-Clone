@@ -4,7 +4,7 @@ const rightArrow = document.querySelector(".rightArrow");
 const titleMain = document.querySelector(".titleMain");
 const contentMain = document.querySelector(".contentMain");
 
-arrayFoto = ["../img/mainfoto.png", "../img/mainfoto2.png"];
+arrayFoto = ["img/mainfoto.png", "img/mainfoto2.png"];
 var i = 0;
 
 leftClick = () => {

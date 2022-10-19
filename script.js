@@ -5,6 +5,11 @@ const titleMain = document.querySelector(".titleMain");
 const contentMain = document.querySelector(".contentMain");
 const mainImg = document.querySelector(".main img");
 const accessMain = document.querySelector(".accessMain");
+const notificationMenu = document.querySelector(".notificationMenu");
+const notificationbtn = document.querySelector(".notification");
+const languagebtn = document.querySelector(".right");
+const language = document.querySelector(".language");
+
 
 var i = 0;
 
@@ -59,3 +64,33 @@ change = () => {
 window.onload = function () {
     setInterval(change, 3000);
 };
+
+var k = 0;
+var l = 0;
+
+notificationClick = () => {
+    if (k == 0) {
+        notificationMenu.style.visibility = "visible";
+        k++;
+    }
+    else {
+        notificationMenu.style.visibility = "hidden";
+        k--;
+    }
+    
+}
+
+notificationbtn.addEventListener("click", notificationClick);
+
+languageVisibility = () => {
+    if (l == 0) {
+        language.style.visibility = "visible";
+        l++;
+    }
+    else {
+        language.style.visibility = "hidden";
+        l--;
+    }
+}
+
+languagebtn.addEventListener("click", languageVisibility);

@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+    position: relative;
     width: 1600px;
     height: 2000px;
     background-color: #fff;
@@ -135,10 +136,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    background-color: #BCE29E;
 }
 
 .right:hover {
-    background-color: #A8E890;
+    background-color: #E5EBB2;
     cursor: pointer;
 }
 
@@ -359,4 +362,68 @@ body {
 .lesson2 {
     margin-left: 40px;
     margin-bottom: 10px;
+}
+
+
+/* **************************************** */
+
+.language {
+    visibility: hidden;
+}
+
+.language {
+    position: absolute;
+    top: 24.9%;
+    right: 8.1%;
+    width: 400px;
+    height: 30px;
+    background-color: #fff;
+}
+
+.languageLine {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.notificationMenu {
+    visibility: hidden;
+}
+
+.notificationMenu {
+    position: absolute;
+    top: 9%;
+    right: 21%;
+    width: 300px;
+    height: 400px;
+    background-color: #EB1D36;
+}
+
+.firstLine {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.firstLine i{
+    margin-right: 5px;
+}
+
+.black-line {
+    border: solid 0.5px black;
+}
+
+.notificationMain {
+    height: 350px;
+    text-align: center;
+}
+
+.seeAll {
+    text-align: center;
+}
+
+.seeAll a {
+    text-decoration: none;
+    color: #fff;
 }

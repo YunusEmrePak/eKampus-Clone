@@ -6,7 +6,6 @@ const contentMain = document.querySelector(".contentMain");
 const mainImg = document.querySelector(".main img");
 const accessMain = document.querySelector(".accessMain");
 
-arrayFoto = ["img/mainfoto.png", "img/mainfoto2.png"];
 var i = 0;
 
 leftClick = () => {
@@ -42,17 +41,21 @@ rightClick = () => {
 leftArrow.addEventListener("click", leftClick);
 rightArrow.addEventListener("click", rightClick);
 
-for (var j = 0;j < 999; j++) {
-    setInterval (function(){
+change = () => {
+    if (i == 0) {
         mainImg.src = "img/mainfoto2.png";
-        i = 0;
         titleMain.innerHTML = "Unlimited Access to Information"
         contentMain.innerHTML = "Electronic Databases, Books, Journals, Open Access Resources, Open Course Materials";
-      } , 3000);
-      setInterval (function(){
+        i++;
+    }
+    else {
         mainImg.src = "img/mainfoto.png";
-        i = 1;
         titleMain.innerHTML = "The Faculty of Open and Distance Education";
         contentMain.innerHTML = "Innovation, quality, flexibilty, interaction, experience";
-      } , 6000);
+        i--;
+    }
 }
+
+window.onload = function () {
+    setInterval(change, 3000);
+};

@@ -9,6 +9,14 @@ const notificationMenu = document.querySelector(".notificationMenu");
 const notificationbtn = document.querySelector(".notification");
 const languagebtn = document.querySelector(".right");
 const language = document.querySelector(".language");
+const messagebtn = document.querySelector(".message");
+const messagearea = document.querySelector(".messageArea");
+const closeIcon = document.querySelector(".closeIcon");
+const searchbtn = document.querySelector(".search");
+const searchArea = document.querySelector(".searchArea");
+const searchCloseIcon = document.querySelector(".searchCloseIcon");
+const body = document.querySelector("body");
+
 
 
 var i = 0;
@@ -65,17 +73,20 @@ window.onload = function () {
     setInterval(change, 3000);
 };
 
-var k = 0;
-var l = 0;
+var control_notification = 0;
+var control_language = 0;
+var control_message = 0;
+var control_search = 0;
+
 
 notificationClick = () => {
-    if (k == 0) {
+    if (control_notification == 0) {
         notificationMenu.style.visibility = "visible";
-        k++;
+        control_notification++;
     }
     else {
         notificationMenu.style.visibility = "hidden";
-        k--;
+        control_notification--;
     }
     
 }
@@ -83,14 +94,44 @@ notificationClick = () => {
 notificationbtn.addEventListener("click", notificationClick);
 
 languageVisibility = () => {
-    if (l == 0) {
+    if (control_language == 0) {
         language.style.visibility = "visible";
-        l++;
+        control_language++;
     }
     else {
         language.style.visibility = "hidden";
-        l--;
+        control_language--;
     }
 }
 
 languagebtn.addEventListener("click", languageVisibility);
+
+messageVisibility = () => {
+    if (control_message == 0) {
+        messagearea.style.visibility = "visible";
+        control_message++;
+    }
+    else {
+        messagearea.style.visibility = "hidden";
+        control_message--;
+    }
+    
+}
+
+messagebtn.addEventListener("click", messageVisibility);
+closeIcon.addEventListener("click", messageVisibility);
+
+searchVisibility = () => {
+    if (control_search == 0) {
+        searchArea.style.visibility = "visible";
+        control_search++;
+    }
+    else {
+        searchArea.style.visibility = "hidden";
+        control_search--;
+    }
+}
+
+searchbtn.addEventListener("click", searchVisibility);
+
+searchCloseIcon.addEventListener("click", searchVisibility);

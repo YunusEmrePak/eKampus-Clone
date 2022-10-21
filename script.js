@@ -15,7 +15,11 @@ const closeIcon = document.querySelector(".closeIcon");
 const searchbtn = document.querySelector(".search");
 const searchArea = document.querySelector(".searchArea");
 const searchCloseIcon = document.querySelector(".searchCloseIcon");
-const body = document.querySelector("body");
+const courseList = document.querySelector(".courseList");
+const courseArea = document.querySelector(".courses");
+const logArea = document.querySelector(".logIn");
+const loginMenu = document.querySelector(".iconLogin");
+
 
 
 
@@ -77,6 +81,8 @@ var control_notification = 0;
 var control_language = 0;
 var control_message = 0;
 var control_search = 0;
+var control_course = 0;
+var control_login = 0;
 
 
 notificationClick = () => {
@@ -135,3 +141,29 @@ searchVisibility = () => {
 searchbtn.addEventListener("click", searchVisibility);
 
 searchCloseIcon.addEventListener("click", searchVisibility);
+
+courseVisibility = () => {
+    if (control_course == 0) {
+        courseList.style.visibility = "visible";
+        control_course++;
+    }
+    else {
+        courseList.style.visibility = "hidden";
+        control_course--;
+    }
+}
+
+courseArea.addEventListener("click", courseVisibility);
+
+logVisibility = () => {
+    if (control_login == 0) {
+        loginMenu.style.visibility = "visible";
+        control_login++;
+    }
+    else {
+        loginMenu.style.visibility = "hidden";
+        control_login--;
+    }
+}
+
+logArea.addEventListener("click", logVisibility);
